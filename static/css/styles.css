@@ -1,0 +1,137 @@
+:root {
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --error-color: #dc3545;
+    --border-color: #dee2e6;
+}
+
+body {
+    margin: 0;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-left img {
+    height: 40px;
+}
+
+.header-right {
+    text-align: right;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 300px 1fr 400px;
+    gap: 20px;
+    height: calc(100vh - 100px);
+}
+
+.left-panel > div,
+.right-panel > div {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.part-info-box {
+    background-color: white;
+}
+
+.production-box.success {
+    background-color: #d4edda;
+    border-color: var(--success-color);
+}
+
+.production-box.warning {
+    background-color: #fff3cd;
+    border-color: var(--warning-color);
+}
+
+.scrap-box {
+    background-color: #fff3cd;
+    border-color: var(--warning-color);
+}
+
+.chart-container {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    margin-bottom: 20px;
+    height: calc(50% - 20px);
+}
+
+.camera-feed {
+    height: 300px;
+}
+
+.video-container {
+    position: relative;
+    height: calc(100% - 30px);
+}
+
+.video-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.production-details-box {
+    height: 200px;
+    overflow-y: auto;
+}
+
+.total-production-box {
+    text-align: center;
+    background-color: #d4edda !important;
+}
+
+.total-scrap-box {
+    text-align: center;
+    background-color: #fff3cd !important;
+}
+
+.total-quantity,
+.total-scrap {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.delta {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.delta.negative {
+    color: var(--error-color);
+}
